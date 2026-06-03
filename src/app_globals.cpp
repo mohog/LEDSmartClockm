@@ -17,7 +17,7 @@ const char wifiInitialApPassword[] = "ledsmartclock";
 WireInterface wireInterface(Wire);
 DS3231Clock<WireInterface> dsClock(wireInterface);
 CRGB leds[NUMMATRIX];
-FastLED_NeoMatrix *matrix = new FastLED_NeoMatrix(leds, mw, mh, NEO_MATRIX_BOTTOM + NEO_MATRIX_RIGHT + NEO_MATRIX_COLUMNS + NEO_MATRIX_ZIGZAG);
+FastLED_NeoMatrix *matrix = new FastLED_NeoMatrix(leds, mw, mh, NEO_MATRIX_BOTTOM + NEO_MATRIX_RIGHT + NEO_MATRIX_ROWS + NEO_MATRIX_ZIGZAG);
 TinyGPSPlus GPS;
 Tsl2561 Tsl(Wire);
 DNSServer dnsServer;
